@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>536962423859-8l0jm3p4askajm3l3aqqatdm127ilkrb.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.536962423859-8l0jm3p4askajm3l3aqqatdm127ilkrb</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC3a2bzgZ5Elsqglat3drMlQJity9JozJc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>536962423859</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fredlefevre.Artable</string>
+	<key>PROJECT_ID</key>
+	<string>artable-3753d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>artable-3753d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:536962423859:ios:a50e85e9b3ddd9f6</string>
+	<key>DATABASE_URL</key>
+	<string>https://artable-3753d.firebaseio.com</string>
+</dict>
+</plist>

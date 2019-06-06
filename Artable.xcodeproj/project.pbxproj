@@ -17,6 +17,7 @@
 		48C1470922A986E9004987CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C1470722A986E9004987CF /* Main.storyboard */; };
 		48C1470E22A986EA004987CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C1470C22A986EA004987CF /* LaunchScreen.storyboard */; };
 		48C1471422A98728004987CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48C146F222A986C5004987CF /* Assets.xcassets */; };
+		48C1471622A98D08004987CF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C1471522A98D08004987CF /* Login.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		48C1470822A986E9004987CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48C1470D22A986EA004987CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48C1470F22A986EA004987CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48C1471522A98D08004987CF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				48C146EB22A986C4004987CF /* AppDelegate.swift */,
 				48C146ED22A986C4004987CF /* ViewController.swift */,
+				48C1471522A98D08004987CF /* Login.storyboard */,
 				48C146EF22A986C4004987CF /* Main.storyboard */,
 				48C146F422A986C5004987CF /* LaunchScreen.storyboard */,
 				48C146F722A986C5004987CF /* Info.plist */,
@@ -183,6 +186,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C1471622A98D08004987CF /* Login.storyboard in Resources */,
 				48C146F622A986C5004987CF /* LaunchScreen.storyboard in Resources */,
 				48C146F322A986C5004987CF /* Assets.xcassets in Resources */,
 				48C146F122A986C4004987CF /* Main.storyboard in Resources */,

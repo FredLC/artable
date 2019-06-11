@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4831662022AA955B00F01501 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831661F22AA955B00F01501 /* RegisterVC.swift */; };
+		4831662222AA956B00F01501 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831662122AA956B00F01501 /* LoginVC.swift */; };
 		48C146EC22A986C4004987CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C146EB22A986C4004987CF /* AppDelegate.swift */; };
 		48C146EE22A986C4004987CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C146ED22A986C4004987CF /* ViewController.swift */; };
 		48C146F122A986C4004987CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C146EF22A986C4004987CF /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 		1C5ADE83AE2331DF1062E957 /* Pods-Artable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.debug.xcconfig"; path = "Target Support Files/Pods-Artable/Pods-Artable.debug.xcconfig"; sourceTree = "<group>"; };
 		447329D115D0676A0229A4A9 /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459C45CDB919CBBB0512817E /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		4831661F22AA955B00F01501 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4831662122AA956B00F01501 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		48C146E822A986C4004987CF /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C146EB22A986C4004987CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C146ED22A986C4004987CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4831661B22AA949400F01501 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4831662122AA956B00F01501 /* LoginVC.swift */,
+				4831661F22AA955B00F01501 /* RegisterVC.swift */,
+				48C146ED22A986C4004987CF /* ViewController.swift */,
+				48C146EB22A986C4004987CF /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4831661C22AA949D00F01501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4831661D22AA94A200F01501 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4831661E22AA94A800F01501 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				48C1471522A98D08004987CF /* Login.storyboard */,
+				48C146EF22A986C4004987CF /* Main.storyboard */,
+				48C146F422A986C5004987CF /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		48C146DF22A986C4004987CF = {
 			isa = PBXGroup;
 			children = (
@@ -93,11 +132,10 @@
 		48C146EA22A986C4004987CF /* Artable */ = {
 			isa = PBXGroup;
 			children = (
-				48C146EB22A986C4004987CF /* AppDelegate.swift */,
-				48C146ED22A986C4004987CF /* ViewController.swift */,
-				48C1471522A98D08004987CF /* Login.storyboard */,
-				48C146EF22A986C4004987CF /* Main.storyboard */,
-				48C146F422A986C5004987CF /* LaunchScreen.storyboard */,
+				4831661D22AA94A200F01501 /* Model */,
+				4831661C22AA949D00F01501 /* View */,
+				4831661B22AA949400F01501 /* Controller */,
+				4831661E22AA94A800F01501 /* Storyboards */,
 				48C1471722A9AE65004987CF /* GoogleService-Info.plist */,
 				48C146F722A986C5004987CF /* Info.plist */,
 			);
@@ -335,7 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4831662022AA955B00F01501 /* RegisterVC.swift in Sources */,
 				48C146EE22A986C4004987CF /* ViewController.swift in Sources */,
+				4831662222AA956B00F01501 /* LoginVC.swift in Sources */,
 				48C146EC22A986C4004987CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

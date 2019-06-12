@@ -55,7 +55,10 @@ class RegisterVC: UIViewController {
         
         activityIndicator.startAnimating()
         
-        Auth.auth().createUser(withEmail: email, password: password) { (authDataResult, error) in
+        guard let authUser = Auth.auth().currentUser else { return }
+        
+        let credential = EmailAuthProvider.credential(withEmail: email, password: password)
+        authUser.link(with: credential) { (result, error) in
             if let error = error {
                 debugPrint(error)
                 self.activityIndicator.stopAnimating()
@@ -65,6 +68,7 @@ class RegisterVC: UIViewController {
             self.activityIndicator.stopAnimating()
             self.dismiss(animated: true, completion: nil)
         }
+        
     }
     
 }

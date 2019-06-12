@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_left1" translatesAutoresizingMaskIntoConstraints="NO" id="e7d-yP-Leb">
-                                <rect key="frame" x="0.0" y="88" width="414.00000000000045" height="808"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="QVQ-Dd-M85">
                                 <rect key="frame" x="20" y="108" width="374" height="363"/>
@@ -54,6 +54,9 @@
                                         <state key="normal" title="Forgot Password?">
                                             <color key="titleColor" red="0.83529411764705885" green="0.39215686274509803" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed:" destination="FbY-vS-HOv" eventType="touchUpInside" id="Tky-xX-crB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anC-qW-mLT" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="209" width="374" height="40"/>
@@ -65,6 +68,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInButtonPressed:" destination="FbY-vS-HOv" eventType="touchUpInside" id="Isv-EL-nUX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXm-XL-kRu" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="266" width="374" height="40"/>
@@ -90,6 +96,9 @@
                                         <state key="normal" title="Continue as Guest">
                                             <color key="titleColor" red="0.95294117647058818" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="guestButtonPressed:" destination="FbY-vS-HOv" eventType="touchUpInside" id="mqI-w2-Aam"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -113,6 +122,11 @@
                         <viewLayoutGuide key="safeArea" id="Ds0-hZ-aP2"/>
                     </view>
                     <navigationItem key="navigationItem" id="upt-ug-n3O"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Kds-RR-VOR" id="ret-Ts-uM9"/>
+                        <outlet property="emailTextField" destination="ZVV-ic-ujR" id="nEB-Mb-ose"/>
+                        <outlet property="passwordTextField" destination="72P-AJ-DVh" id="wy5-ga-Yvc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAs-cV-C6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

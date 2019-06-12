@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
 def shared_pods
   pod 'Firebase/Core', '6.1.0'
@@ -27,5 +27,4 @@ target 'ArtableAdmin' do
 
   # Pods for ArtableAdmin
   shared_pods
-  pod 'CropViewController'
 end

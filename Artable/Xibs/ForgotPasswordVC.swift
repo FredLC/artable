@@ -30,7 +30,7 @@ class ForgotPasswordVC: UIViewController {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             if let error = error {
                 debugPrint(error.localizedDescription)
-                self.handleFireAuthErrors(error: error)
+                Auth.auth().handleFireAuthErrors(error: error, vc: self)
                 return
             }
             self.dismiss(animated: true, completion: nil)

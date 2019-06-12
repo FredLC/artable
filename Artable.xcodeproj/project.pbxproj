@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4831662022AA955B00F01501 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831661F22AA955B00F01501 /* RegisterVC.swift */; };
 		4831662222AA956B00F01501 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831662122AA956B00F01501 /* LoginVC.swift */; };
+		4833760C22B1A7DB00235220 /* Firebase + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4833760B22B1A7DB00235220 /* Firebase + Utils.swift */; };
+		4833760D22B1A88A00235220 /* Firebase + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4833760B22B1A7DB00235220 /* Firebase + Utils.swift */; };
 		483FE6A622B1389A008AA6DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FE6A522B1389A008AA6DA /* Constants.swift */; };
 		483FE6A922B13E9E008AA6DA /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483FE6A822B13E9E008AA6DA /* RoundedViews.swift */; };
 		485F24AE22B16F690024F7F7 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485F24AC22B16F690024F7F7 /* ForgotPasswordVC.swift */; };
@@ -37,6 +39,7 @@
 		459C45CDB919CBBB0512817E /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
 		4831661F22AA955B00F01501 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4831662122AA956B00F01501 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4833760B22B1A7DB00235220 /* Firebase + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase + Utils.swift"; sourceTree = "<group>"; };
 		483FE6A522B1389A008AA6DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		483FE6A822B13E9E008AA6DA /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
 		485F24AC22B16F690024F7F7 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 			children = (
 				48D034DE22B079750030C216 /* Extensions.swift */,
 				483FE6A522B1389A008AA6DA /* Constants.swift */,
+				4833760B22B1A7DB00235220 /* Firebase + Utils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -414,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D034DF22B079750030C216 /* Extensions.swift in Sources */,
+				4833760C22B1A7DB00235220 /* Firebase + Utils.swift in Sources */,
 				4831662022AA955B00F01501 /* RegisterVC.swift in Sources */,
 				48C146EE22A986C4004987CF /* HomeVC.swift in Sources */,
 				4831662222AA956B00F01501 /* LoginVC.swift in Sources */,
@@ -429,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48C1470622A986E9004987CF /* ViewController.swift in Sources */,
+				4833760D22B1A88A00235220 /* Firebase + Utils.swift in Sources */,
 				48C1470422A986E9004987CF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,6 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6V3TXD99T;
 				INFOPLIST_FILE = Artable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,6 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6V3TXD99T;
 				INFOPLIST_FILE = Artable/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -633,6 +641,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6V3TXD99T;
 				INFOPLIST_FILE = ArtableAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,6 +661,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R6V3TXD99T;
 				INFOPLIST_FILE = ArtableAdmin/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

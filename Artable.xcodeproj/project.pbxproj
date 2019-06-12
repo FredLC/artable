@@ -22,6 +22,7 @@
 		48C1471622A98D08004987CF /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C1471522A98D08004987CF /* Login.storyboard */; };
 		48C1471822A9AE65004987CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48C1471722A9AE65004987CF /* GoogleService-Info.plist */; };
 		48C1471A22A9B0A1004987CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 48C1471922A9B0A1004987CF /* GoogleService-Info.plist */; };
+		48D034DF22B079750030C216 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48D034DE22B079750030C216 /* Extensions.swift */; };
 		6B70B6A9B3ABEC8073DE83B8 /* Pods_ArtableAdmin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5437DA879903DE073159A75 /* Pods_ArtableAdmin.framework */; };
 		7F28DAA3193F08CD91B8B723 /* Pods_Artable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 447329D115D0676A0229A4A9 /* Pods_Artable.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		48C1471522A98D08004987CF /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		48C1471722A9AE65004987CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		48C1471922A9B0A1004987CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		48D034DE22B079750030C216 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A1DCA331FD07A4D884092441 /* Pods-Artable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.release.xcconfig"; path = "Target Support Files/Pods-Artable/Pods-Artable.release.xcconfig"; sourceTree = "<group>"; };
 		D737D7CD321C9773AFBF017C /* Pods-ArtableAdmin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.debug.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.debug.xcconfig"; sourceTree = "<group>"; };
 		F5437DA879903DE073159A75 /* Pods_ArtableAdmin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArtableAdmin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,9 +160,18 @@
 		48C1471322A98702004987CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				48D034DD22B0795C0030C216 /* Utils */,
 				48C146F222A986C5004987CF /* Assets.xcassets */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		48D034DD22B0795C0030C216 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				48D034DE22B079750030C216 /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		6403036186A764710E3113A7 /* Pods */ = {
@@ -373,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D034DF22B079750030C216 /* Extensions.swift in Sources */,
 				4831662022AA955B00F01501 /* RegisterVC.swift in Sources */,
 				48C146EE22A986C4004987CF /* ViewController.swift in Sources */,
 				4831662222AA956B00F01501 /* LoginVC.swift in Sources */,

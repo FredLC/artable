@@ -51,7 +51,15 @@ class RegisterVC: UIViewController {
     @IBAction func registerButtonPressed(_ sender: Any) {
         guard let email = emailTextField.text , email.isNotEmpty ,
               let username = usernameTextField.text , username.isNotEmpty ,
-              let password = passwordTextField.text , password.isNotEmpty else { return }
+              let password = passwordTextField.text , password.isNotEmpty else {
+                simpleAlert(title: "Error", message: "Please fill out all fields.")
+                return
+        }
+        
+        guard let confirmPassword = confirmPasswordTextField.text , confirmPassword == password else {
+            simpleAlert(title: "Error", message: "Passwords do not match.")
+            return
+        }
         
         activityIndicator.startAnimating()
         
@@ -61,6 +69,7 @@ class RegisterVC: UIViewController {
         authUser.link(with: credential) { (result, error) in
             if let error = error {
                 debugPrint(error)
+                self.handleFireAuthErrors(error: error)
                 self.activityIndicator.stopAnimating()
                 return
             }

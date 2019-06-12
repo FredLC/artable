@@ -37,7 +37,7 @@ class LoginVC: UIViewController {
             }
             
             self.activityIndicator.stopAnimating()
-            print("successfully logged in user")
+            self.dismiss(animated: true, completion: nil)
         }
     }
     

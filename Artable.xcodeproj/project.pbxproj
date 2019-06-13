@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		481EF00F22B2C63400362F31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EF00E22B2C63400362F31 /* Category.swift */; };
+		481EF01022B2C63400362F31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EF00E22B2C63400362F31 /* Category.swift */; };
 		4831662022AA955B00F01501 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831661F22AA955B00F01501 /* RegisterVC.swift */; };
 		4831662222AA956B00F01501 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4831662122AA956B00F01501 /* LoginVC.swift */; };
 		4833760C22B1A7DB00235220 /* Firebase + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4833760B22B1A7DB00235220 /* Firebase + Utils.swift */; };
@@ -37,6 +39,7 @@
 		1C5ADE83AE2331DF1062E957 /* Pods-Artable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.debug.xcconfig"; path = "Target Support Files/Pods-Artable/Pods-Artable.debug.xcconfig"; sourceTree = "<group>"; };
 		447329D115D0676A0229A4A9 /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459C45CDB919CBBB0512817E /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		481EF00E22B2C63400362F31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		4831661F22AA955B00F01501 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		4831662122AA956B00F01501 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4833760B22B1A7DB00235220 /* Firebase + Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Firebase + Utils.swift"; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		4831661D22AA94A200F01501 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				481EF00E22B2C63400362F31 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				485F24AB22B16F470024F7F7 /* Xibs */,
-				4831661D22AA94A200F01501 /* Model */,
 				4831661C22AA949D00F01501 /* View */,
 				4831661B22AA949400F01501 /* Controller */,
 				4831661E22AA94A800F01501 /* Storyboards */,
@@ -189,6 +192,7 @@
 		48C1471322A98702004987CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				4831661D22AA94A200F01501 /* Model */,
 				483FE6A722B13E8C008AA6DA /* View */,
 				48D034DD22B0795C0030C216 /* Utils */,
 				48C146F222A986C5004987CF /* Assets.xcassets */,
@@ -418,6 +422,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D034DF22B079750030C216 /* Extensions.swift in Sources */,
+				481EF00F22B2C63400362F31 /* Category.swift in Sources */,
 				4833760C22B1A7DB00235220 /* Firebase + Utils.swift in Sources */,
 				4831662022AA955B00F01501 /* RegisterVC.swift in Sources */,
 				48C146EE22A986C4004987CF /* HomeVC.swift in Sources */,
@@ -436,6 +441,7 @@
 				48C1470622A986E9004987CF /* ViewController.swift in Sources */,
 				4833760D22B1A88A00235220 /* Firebase + Utils.swift in Sources */,
 				48C1470422A986E9004987CF /* AppDelegate.swift in Sources */,
+				481EF01022B2C63400362F31 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

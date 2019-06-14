@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" id="KGk-i7-Jjw" customClass="ProductCell" customModule="Artable" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClZ-hs-a34" customClass="RoundedShadowView" customModule="Artable" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="384" height="183.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aerial_1" translatesAutoresizingMaskIntoConstraints="NO" id="Q35-KV-dQi" customClass="RoundedImageView" customModule="Artable" customModuleProvider="target">
+                                <rect key="frame" x="8" y="8" width="167.5" height="167.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Q35-KV-dQi" secondAttribute="height" multiplier="1:1" id="15d-aI-J9A"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gx9-1s-8t3">
+                                <rect key="frame" x="346" y="8" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3Jz-f5-HQs"/>
+                                    <constraint firstAttribute="width" constant="30" id="olY-lq-ZbA"/>
+                                </constraints>
+                                <state key="normal" image="empty_star"/>
+                                <connections>
+                                    <action selector="favoriteButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TJh-yd-Nsr"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="BO4-sl-GCd">
+                                <rect key="frame" x="195.5" y="27.5" width="168.5" height="129"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUm-kd-207">
+                                        <rect key="frame" x="29" y="0.0" width="111" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$99.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8Y-LS-0Mz">
+                                        <rect key="frame" x="38.5" y="41.5" width="92" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                        <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOi-us-XTJ" customClass="RoundedButton" customModule="Artable" customModuleProvider="target">
+                                        <rect key="frame" x="27" y="96" width="115" height="33"/>
+                                        <color key="backgroundColor" red="0.83529411760000005" green="0.3921568627" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
+                                        <state key="normal" title="Add To Cart">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addToCartPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rn1-xR-0hG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q35-KV-dQi" firstAttribute="leading" secondItem="ClZ-hs-a34" secondAttribute="leading" constant="8" id="0re-b5-VtF"/>
+                            <constraint firstItem="BO4-sl-GCd" firstAttribute="centerY" secondItem="ClZ-hs-a34" secondAttribute="centerY" id="3iP-Ua-psn"/>
+                            <constraint firstAttribute="bottom" secondItem="Q35-KV-dQi" secondAttribute="bottom" constant="8" id="PB0-ot-ElU"/>
+                            <constraint firstAttribute="trailing" secondItem="BO4-sl-GCd" secondAttribute="trailing" constant="20" id="XKg-IO-wBS"/>
+                            <constraint firstItem="BO4-sl-GCd" firstAttribute="leading" secondItem="Q35-KV-dQi" secondAttribute="trailing" constant="20" id="YOA-HP-lbd"/>
+                            <constraint firstAttribute="trailing" secondItem="Gx9-1s-8t3" secondAttribute="trailing" constant="8" id="lH5-fb-EfS"/>
+                            <constraint firstItem="Q35-KV-dQi" firstAttribute="top" secondItem="ClZ-hs-a34" secondAttribute="top" constant="8" id="pLY-6A-Yca"/>
+                            <constraint firstItem="Gx9-1s-8t3" firstAttribute="top" secondItem="ClZ-hs-a34" secondAttribute="top" constant="8" id="ra4-Da-LtR"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="ClZ-hs-a34" secondAttribute="trailing" constant="8" id="2Yl-mT-DjX"/>
+                    <constraint firstItem="ClZ-hs-a34" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="61y-Fy-nEt"/>
+                    <constraint firstAttribute="bottom" secondItem="ClZ-hs-a34" secondAttribute="bottom" constant="8" id="Ykh-RE-esG"/>
+                    <constraint firstItem="ClZ-hs-a34" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Yws-J8-uMX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteButton" destination="Gx9-1s-8t3" id="ihg-2n-WTq"/>
+                <outlet property="productImage" destination="Q35-KV-dQi" id="8E8-MT-SXo"/>
+                <outlet property="productName" destination="dUm-kd-207" id="xph-SE-36x"/>
+                <outlet property="productPrice" destination="Z8Y-LS-0Mz" id="5CL-ZB-bmA"/>
+            </connections>
+            <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="aerial_1" width="1000" height="1333"/>
+        <image name="empty_star" width="47" height="47"/>
+    </resources>
+</document>

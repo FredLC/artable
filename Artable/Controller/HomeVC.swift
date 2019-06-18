@@ -38,8 +38,7 @@ class HomeVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //        fetchDocument()
-        fetchCollection()
+        setCategoriesListener()
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginLogoutButton.title = "Logout"
         } else {
@@ -49,6 +48,8 @@ class HomeVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         listener.remove()
+        categories.removeAll()
+        collectionView.reloadData()
     }
     
     fileprivate func presentLoginController() {
@@ -57,49 +58,45 @@ class HomeVC: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
-    func fetchDocument() {
-        let docRef = db.collection("categories").document("1dvtH7X3T1BcXXnvvwgd")
-        
-        docRef.addSnapshotListener { (snap, error) in
-            self.categories.removeAll()
-            guard let data = snap?.data() else { return }
-            let newCategory = Category.init(data: data)
-            self.categories.append(newCategory)
-            self.collectionView.reloadData()
-        }
-        
-//        docRef.getDocument { (snap, error) in
-//            guard let data = snap?.data() else { return }
-//            let newCategory = Category.init(data: data)
-//            self.categories.append(newCategory)
-//            self.collectionView.reloadData()
-//        }
+    func setCategoriesListener() {
+        listener = db.collection("categories").addSnapshotListener({ (snap, error) in
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                return
+            }
+            
+            snap?.documentChanges.forEach({ (change) in
+                let data = change.document.data()
+                let category = Category.init(data: data)
+                
+                switch change.type {
+                case .added:
+                    self.onDocumentAdded(change: change, category: category)
+                case .modified:
+                    self.onDocumentModified()
+                case .removed:
+                    self.onDocumentRemoved()
+                @unknown default:
+                    print("Fatal error")
+                }
+            })
+        })
     }
     
-    func fetchCollection() {
-        let collectionRef = db.collection("categories")
-        
-        listener = collectionRef.addSnapshotListener { (snap, error) in
-            guard let documents = snap?.documents else { return }
-            self.categories.removeAll()
-            for document in documents {
-                let data = document.data()
-                let newCategory = Category.init(data: data)
-                self.categories.append(newCategory)
-            }
-            self.collectionView.reloadData()
-        }
-        
-//        collectionRef.getDocuments { (snap, error) in
-//            guard let documents = snap?.documents else { return }
-//            for document in documents {
-//                let data = document.data()
-//                let newCategory = Category.init(data: data)
-//                self.categories.append(newCategory)
-//            }
-//            self.collectionView.reloadData()
-//        }
+    func onDocumentAdded(change: DocumentChange, category: Category) {
+        let newIndex = Int(change.newIndex)
+        categories.insert(category, at: newIndex)
+        collectionView.insertItems(at: [IndexPath(row: newIndex, section: 0)])
     }
+    
+    func onDocumentModified() {
+        
+    }
+    
+    func onDocumentRemoved() {
+        
+    }
+    
 
     @IBAction func loginLogoutButtonPressed(_ sender: Any) {
         
@@ -161,3 +158,50 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
 }
 
+
+
+
+
+//func fetchDocument() {
+//    let docRef = db.collection("categories").document("1dvtH7X3T1BcXXnvvwgd")
+//
+//    docRef.addSnapshotListener { (snap, error) in
+//        self.categories.removeAll()
+//        guard let data = snap?.data() else { return }
+//        let newCategory = Category.init(data: data)
+//        self.categories.append(newCategory)
+//        self.collectionView.reloadData()
+//    }
+
+    //        docRef.getDocument { (snap, error) in
+    //            guard let data = snap?.data() else { return }
+    //            let newCategory = Category.init(data: data)
+    //            self.categories.append(newCategory)
+    //            self.collectionView.reloadData()
+    //        }
+//}
+
+//func fetchCollection() {
+//    let collectionRef = db.collection("categories")
+//
+//    listener = collectionRef.addSnapshotListener { (snap, error) in
+//        guard let documents = snap?.documents else { return }
+//        self.categories.removeAll()
+//        for document in documents {
+//            let data = document.data()
+//            let newCategory = Category.init(data: data)
+//            self.categories.append(newCategory)
+//        }
+//        self.collectionView.reloadData()
+//    }
+
+    //        collectionRef.getDocuments { (snap, error) in
+    //            guard let documents = snap?.documents else { return }
+    //            for document in documents {
+    //                let data = document.data()
+    //                let newCategory = Category.init(data: data)
+    //                self.categories.append(newCategory)
+    //            }
+    //            self.collectionView.reloadData()
+    //        }
+//}

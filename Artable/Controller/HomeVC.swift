@@ -17,11 +17,11 @@ class HomeVC: UIViewController {
     
     var categories = [Category]()
     var selectedCategory: Category!
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let category = Category(name: "Nature", id: "ljsnldk;", imageUrl: "https://images.unsplash.com/photo-1560345573-9f453083c335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", isActive: true, timeStamp: Timestamp())
-        categories.append(category)
+        db = Firestore.firestore()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -34,6 +34,8 @@ class HomeVC: UIViewController {
                 }
             }
         }
+        
+        fetchDocument()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -49,6 +51,18 @@ class HomeVC: UIViewController {
         let controller = storyboard.instantiateViewController(withIdentifier: StoryboardId.LoginVC)
         present(controller, animated: true, completion: nil)
     }
+    
+    func fetchDocument() {
+        let docRef = db.collection("categories").document("1dvtH7X3T1BcXXnvvwgd")
+        
+        docRef.getDocument { (snap, error) in
+            guard let data = snap?.data() else { return }
+            let newCategory = Category.init(data: data)
+            self.categories.append(newCategory)
+            self.collectionView.reloadData()
+        }
+    }
+    
 
     @IBAction func loginLogoutButtonPressed(_ sender: Any) {
         
@@ -90,7 +104,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = view.frame.width
-        let cellWidth = (width - 50) / 2
+        let cellWidth = (width - 30) / 2
         let cellHeight = cellWidth * 1.5
         return CGSize(width: cellWidth, height: cellHeight)
     }

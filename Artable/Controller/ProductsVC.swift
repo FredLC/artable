@@ -14,7 +14,8 @@ class ProductsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var products = [Product]()
-    
+    var category: Category!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let product = Product(name: "Mountains", id: "lkjlsnslkd", category: "Nature", price: 24.99, productDescription: "Beautiful", imageUrl: "https://images.unsplash.com/photo-1560386797-04b5d3ef6eb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60", timeStamp: Timestamp(), stock: 0, favorite: true)

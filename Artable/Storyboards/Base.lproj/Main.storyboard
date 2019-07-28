@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HomeVC-->
+        <!--artable-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeVC" customModule="Artable" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,12 +51,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tnN-aM-UXT">
+                    <navigationItem key="navigationItem" title="artable" id="tnN-aM-UXT">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="UqA-fS-6bQ">
                             <connections>
                                 <action selector="loginLogoutButtonPressed:" destination="BYZ-38-t0r" id="eVI-cy-Y18"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bar_button_cart" id="z7g-aU-bgN"/>
+                            <barButtonItem image="bar_button_star" id="93U-2F-dZK"/>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="8p1-Zt-4e4" id="6fo-O2-0DO"/>
@@ -115,6 +119,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o0F-z5-rJD">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -127,6 +133,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bar_button_cart" width="27" height="24"/>
+        <image name="bar_button_star" width="26" height="26"/>
         <image name="bg_cat3" width="1500" height="1875"/>
     </resources>
 </document>

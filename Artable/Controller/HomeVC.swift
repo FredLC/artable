@@ -59,7 +59,7 @@ class HomeVC: UIViewController {
     }
     
     func setCategoriesListener() {
-        listener = db.collection("categories").addSnapshotListener({ (snap, error) in
+        listener = db.collection("categories").order(by: "timeStamp", descending: true).addSnapshotListener({ (snap, error) in
             if let error = error {
                 debugPrint(error.localizedDescription)
                 return

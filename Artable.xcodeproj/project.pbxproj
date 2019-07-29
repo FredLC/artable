@@ -13,6 +13,7 @@
 		4802110B22EF8FC900C6AC07 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C146ED22A986C4004987CF /* HomeVC.swift */; };
 		4802110C22EF8FDA00C6AC07 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CC208522B2DBD500EB4516 /* ProductsVC.swift */; };
 		4802110D22EF901800C6AC07 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486CBED122EF69DB007EDD82 /* ProductDetailVC.swift */; };
+		4802111022EF91E000C6AC07 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4802110F22EF91E000C6AC07 /* AddEditCategoryVC.swift */; };
 		481EF00F22B2C63400362F31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EF00E22B2C63400362F31 /* Category.swift */; };
 		481EF01022B2C63400362F31 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EF00E22B2C63400362F31 /* Category.swift */; };
 		481EF01322B2C78D00362F31 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481EF01122B2C78D00362F31 /* CategoryCell.swift */; };
@@ -58,6 +59,7 @@
 		1C5ADE83AE2331DF1062E957 /* Pods-Artable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable.debug.xcconfig"; path = "Target Support Files/Pods-Artable/Pods-Artable.debug.xcconfig"; sourceTree = "<group>"; };
 		447329D115D0676A0229A4A9 /* Pods_Artable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		459C45CDB919CBBB0512817E /* Pods-ArtableAdmin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtableAdmin.release.xcconfig"; path = "Target Support Files/Pods-ArtableAdmin/Pods-ArtableAdmin.release.xcconfig"; sourceTree = "<group>"; };
+		4802110F22EF91E000C6AC07 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
 		481EF00E22B2C63400362F31 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		481EF01122B2C78D00362F31 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		481EF01222B2C78D00362F31 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
@@ -116,6 +118,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4802110E22EF91B400C6AC07 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4802110F22EF91E000C6AC07 /* AddEditCategoryVC.swift */,
+				48C1470522A986E9004987CF /* AdminHomeVC.swift */,
+				48C1470322A986E9004987CF /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		481EF01722B2C79500362F31 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +233,7 @@
 		48C1470222A986E9004987CF /* ArtableAdmin */ = {
 			isa = PBXGroup;
 			children = (
-				48C1470322A986E9004987CF /* AppDelegate.swift */,
-				48C1470522A986E9004987CF /* AdminHomeVC.swift */,
+				4802110E22EF91B400C6AC07 /* Controller */,
 				48C1470722A986E9004987CF /* Main.storyboard */,
 				48C1470C22A986EA004987CF /* LaunchScreen.storyboard */,
 				48C1471922A9B0A1004987CF /* GoogleService-Info.plist */,
@@ -499,6 +510,7 @@
 				486C7E6122B2E6A500D997FD /* ProductCell.swift in Sources */,
 				481EF01422B2C78D00362F31 /* CategoryCell.swift in Sources */,
 				4802110922EF8EEE00C6AC07 /* Extensions.swift in Sources */,
+				4802111022EF91E000C6AC07 /* AddEditCategoryVC.swift in Sources */,
 				4802110C22EF8FDA00C6AC07 /* ProductsVC.swift in Sources */,
 				48CC208A22B2DC0F00EB4516 /* Product.swift in Sources */,
 				4802110B22EF8FC900C6AC07 /* HomeVC.swift in Sources */,

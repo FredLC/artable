@@ -90,14 +90,98 @@
                         <outlet property="activityIndicator" destination="inA-Qi-kxI" id="Cs3-fc-qSK"/>
                         <outlet property="collectionView" destination="RU7-6B-Ilf" id="k0j-Ct-bbu"/>
                         <outlet property="loginLogoutButton" destination="OlD-fR-2Ah" id="vf8-By-5wX"/>
+                        <segue destination="JUJ-l1-w8W" kind="show" identifier="toAddEditCategoryVC" id="rTC-fi-UJS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PM8-Ia-uYq" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="952" y="82"/>
         </scene>
+        <!--Add Edit CategoryVC-->
+        <scene sceneID="Cn0-n6-e04">
+            <objects>
+                <viewController id="JUJ-l1-w8W" customClass="AddEditCategoryVC" customModule="ArtableAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R9m-EV-Ydx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtI-Tt-igR">
+                                <rect key="frame" x="144" y="108" width="126" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Td0-45-iFa">
+                                <rect key="frame" x="20" y="151" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to pick an image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snr-Hc-Kvp">
+                                <rect key="frame" x="125.5" y="201" width="163" height="23"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="iL7-DA-Sp9" customClass="RoundedImageView" customModule="ArtableAdmin" customModuleProvider="target">
+                                <rect key="frame" x="107" y="244" width="200" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="eWI-gF-pPv"/>
+                                    <constraint firstAttribute="width" constant="200" id="pc5-wK-mNn"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfa-j8-pQl" customClass="RoundedButton" customModule="ArtableAdmin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="802" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pmg-oz-Mfi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <state key="normal" title="Add Category">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCategoryPressed:" destination="JUJ-l1-w8W" eventType="touchUpInside" id="5SP-V4-CdH"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="cN2-sS-1NM">
+                                <rect key="frame" x="188.5" y="514" width="37" height="37"/>
+                                <color key="color" red="0.2274509804" green="0.2666666667" blue="0.36078431370000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Td0-45-iFa" firstAttribute="top" secondItem="xtI-Tt-igR" secondAttribute="bottom" constant="20" id="3Ya-Rv-zZZ"/>
+                            <constraint firstItem="snr-Hc-Kvp" firstAttribute="top" secondItem="Td0-45-iFa" secondAttribute="bottom" constant="20" id="65e-3L-ruD"/>
+                            <constraint firstItem="xtI-Tt-igR" firstAttribute="centerX" secondItem="R9m-EV-Ydx" secondAttribute="centerX" id="6vm-qd-Xfe"/>
+                            <constraint firstItem="snr-Hc-Kvp" firstAttribute="centerX" secondItem="R9m-EV-Ydx" secondAttribute="centerX" id="DxO-Sd-rzq"/>
+                            <constraint firstItem="iL7-DA-Sp9" firstAttribute="centerX" secondItem="R9m-EV-Ydx" secondAttribute="centerX" id="Hp9-n8-1I1"/>
+                            <constraint firstItem="vfF-Cp-w6P" firstAttribute="trailing" secondItem="Td0-45-iFa" secondAttribute="trailing" constant="20" id="NRn-7z-rL9"/>
+                            <constraint firstItem="Td0-45-iFa" firstAttribute="leading" secondItem="vfF-Cp-w6P" secondAttribute="leading" constant="20" id="Rqz-nv-e14"/>
+                            <constraint firstItem="iL7-DA-Sp9" firstAttribute="top" secondItem="snr-Hc-Kvp" secondAttribute="bottom" constant="20" id="TMd-yG-BpB"/>
+                            <constraint firstItem="cN2-sS-1NM" firstAttribute="centerX" secondItem="R9m-EV-Ydx" secondAttribute="centerX" id="ZgR-Mm-kfG"/>
+                            <constraint firstItem="vfF-Cp-w6P" firstAttribute="trailing" secondItem="qfa-j8-pQl" secondAttribute="trailing" constant="20" id="Zjy-ZJ-maj"/>
+                            <constraint firstItem="xtI-Tt-igR" firstAttribute="top" secondItem="vfF-Cp-w6P" secondAttribute="top" constant="20" id="bst-E0-7fO"/>
+                            <constraint firstItem="qfa-j8-pQl" firstAttribute="leading" secondItem="vfF-Cp-w6P" secondAttribute="leading" constant="20" id="hfg-XS-uj0"/>
+                            <constraint firstItem="vfF-Cp-w6P" firstAttribute="bottom" secondItem="qfa-j8-pQl" secondAttribute="bottom" constant="20" id="rKO-wc-H7L"/>
+                            <constraint firstItem="cN2-sS-1NM" firstAttribute="top" secondItem="iL7-DA-Sp9" secondAttribute="bottom" constant="20" id="wRg-Ez-kD8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vfF-Cp-w6P"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="cN2-sS-1NM" id="E2T-Sn-uyg"/>
+                        <outlet property="categoryImage" destination="iL7-DA-Sp9" id="L4n-Te-Pth"/>
+                        <outlet property="categoryText" destination="Td0-45-iFa" id="Zx4-Iy-BAe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lno-gj-heJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="82"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_cat3" width="1500" height="1875"/>
+        <image name="camera" width="66" height="54"/>
     </resources>
 </document>

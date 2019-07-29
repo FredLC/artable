@@ -25,6 +25,8 @@
 		486C7E6122B2E6A500D997FD /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C7E5E22B2E6A500D997FD /* ProductCell.swift */; };
 		486C7E6222B2E6A500D997FD /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486C7E5F22B2E6A500D997FD /* ProductCell.xib */; };
 		486C7E6322B2E6A500D997FD /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486C7E5F22B2E6A500D997FD /* ProductCell.xib */; };
+		486CBED322EF69DB007EDD82 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486CBED122EF69DB007EDD82 /* ProductDetailVC.swift */; };
+		486CBED422EF69DB007EDD82 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486CBED222EF69DB007EDD82 /* ProductDetailVC.xib */; };
 		48C146EC22A986C4004987CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C146EB22A986C4004987CF /* AppDelegate.swift */; };
 		48C146EE22A986C4004987CF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C146ED22A986C4004987CF /* HomeVC.swift */; };
 		48C146F122A986C4004987CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48C146EF22A986C4004987CF /* Main.storyboard */; };
@@ -63,6 +65,8 @@
 		485F24AD22B16F690024F7F7 /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		486C7E5E22B2E6A500D997FD /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		486C7E5F22B2E6A500D997FD /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
+		486CBED122EF69DB007EDD82 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		486CBED222EF69DB007EDD82 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
 		48C146E822A986C4004987CF /* Artable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48C146EB22A986C4004987CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48C146ED22A986C4004987CF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			children = (
 				485F24AC22B16F690024F7F7 /* ForgotPasswordVC.swift */,
 				485F24AD22B16F690024F7F7 /* ForgotPasswordVC.xib */,
+				486CBED122EF69DB007EDD82 /* ProductDetailVC.swift */,
+				486CBED222EF69DB007EDD82 /* ProductDetailVC.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -351,6 +357,7 @@
 				48C146F622A986C5004987CF /* LaunchScreen.storyboard in Resources */,
 				48C1471822A9AE65004987CF /* GoogleService-Info.plist in Resources */,
 				48C146F322A986C5004987CF /* Assets.xcassets in Resources */,
+				486CBED422EF69DB007EDD82 /* ProductDetailVC.xib in Resources */,
 				485F24AF22B16F690024F7F7 /* ForgotPasswordVC.xib in Resources */,
 				48C146F122A986C4004987CF /* Main.storyboard in Resources */,
 			);
@@ -458,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48D034DF22B079750030C216 /* Extensions.swift in Sources */,
+				486CBED322EF69DB007EDD82 /* ProductDetailVC.swift in Sources */,
 				481EF00F22B2C63400362F31 /* Category.swift in Sources */,
 				4833760C22B1A7DB00235220 /* Firebase + Utils.swift in Sources */,
 				4831662022AA955B00F01501 /* RegisterVC.swift in Sources */,

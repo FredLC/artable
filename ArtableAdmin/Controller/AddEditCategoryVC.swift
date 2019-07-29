@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseStorage
+import FirebaseFirestore
 
 class AddEditCategoryVC: UIViewController {
     
@@ -44,34 +45,48 @@ class AddEditCategoryVC: UIViewController {
         // 4. Upload data
         imageReference.putData(imageData, metadata: metaData) { (metaData, error) in
             if let error = error {
-                debugPrint(error.localizedDescription)
-                self.simpleAlert(title: "Error", message: "Unable to upload data")
-                self.activityIndicator.stopAnimating()
+                self.handleError(error: error, message: "Unable to upload data")
                 return
             }
             
             // 5. Once data is uploaded, retrieve download url
             imageReference.downloadURL(completion: { (url, error) in
                 if let error = error {
-                    debugPrint(error.localizedDescription)
-                    self.simpleAlert(title: "Error", message: "Unable to upload data")
-                    self.activityIndicator.stopAnimating()
+                    self.handleError(error: error, message: "Unable to retrieve download url")
                     return
                 }
                 guard let url = url else { return }
-                print(url)
                 // 6. Upload new Category document to the Firestore categories collection
+                self.uploadDocument(url: url.absoluteString)
             })
         }
     }
     
-    func uploadDocument() {
+    func uploadDocument(url: String) {
+        var docRef: DocumentReference!
+        var category = Category.init(name: categoryText.text!, id: "", imageUrl: url, timeStamp: Timestamp())
+        docRef = Firestore.firestore().collection("categories").document()
+        category.id = docRef.documentID
         
+        let data = Category.modelToData(category: category)
+        docRef.setData(data, merge: true) { (error) in
+            if let error = error {
+                self.handleError(error: error, message: "Unable to upload new category to Firestore")
+                return
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     @IBAction func addCategoryPressed(_ sender: Any) {
         activityIndicator.startAnimating()
         uploadImage()
+    }
+    
+    func handleError(error: Error, message: String) {
+        debugPrint(error.localizedDescription)
+        self.simpleAlert(title: "Error", message: message)
+        self.activityIndicator.stopAnimating()
     }
     
 }

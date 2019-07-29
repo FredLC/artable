@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 class AddEditCategoryVC: UIViewController {
     
@@ -27,7 +28,50 @@ class AddEditCategoryVC: UIViewController {
         launchImagePicker()
     }
     
+    func uploadImage() {
+        guard let image = categoryImage.image,
+            let categoryName = categoryText.text, categoryName.isNotEmpty else {
+                simpleAlert(title: "Error", message: "Please enter a name and select and image")
+                return
+        }
+        // 1. Transform image into data
+        guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
+        // 2. Create a storage image reference -> A location in Firestorage for it to be stored.
+        let imageReference = Storage.storage().reference().child("/categoryImages/\(categoryName).jpg")
+        // 3. Set the meta data
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpeg"
+        // 4. Upload data
+        imageReference.putData(imageData, metadata: metaData) { (metaData, error) in
+            if let error = error {
+                debugPrint(error.localizedDescription)
+                self.simpleAlert(title: "Error", message: "Unable to upload data")
+                self.activityIndicator.stopAnimating()
+                return
+            }
+            
+            // 5. Once data is uploaded, retrieve download url
+            imageReference.downloadURL(completion: { (url, error) in
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                    self.simpleAlert(title: "Error", message: "Unable to upload data")
+                    self.activityIndicator.stopAnimating()
+                    return
+                }
+                guard let url = url else { return }
+                print(url)
+                // 6. Upload new Category document to the Firestore categories collection
+            })
+        }
+    }
+    
+    func uploadDocument() {
+        
+    }
+    
     @IBAction func addCategoryPressed(_ sender: Any) {
+        activityIndicator.startAnimating()
+        uploadImage()
     }
     
 }

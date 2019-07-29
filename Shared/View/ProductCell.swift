@@ -27,6 +27,7 @@ class ProductCell: UITableViewCell {
         if let url = URL(string: product.imageUrl) {
             productImage.kf.setImage(with: url)
         }
+        productPrice.text = "$\(String(product.price))"
     }
     
     @IBAction func addToCartPressed(_ sender: Any) {

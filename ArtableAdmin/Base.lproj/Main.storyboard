@@ -172,6 +172,7 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="cN2-sS-1NM" id="E2T-Sn-uyg"/>
+                        <outlet property="addButton" destination="qfa-j8-pQl" id="gtp-ML-vS6"/>
                         <outlet property="categoryImage" destination="iL7-DA-Sp9" id="L4n-Te-Pth"/>
                         <outlet property="categoryText" destination="Td0-45-iFa" id="Zx4-Iy-BAe"/>
                     </connections>

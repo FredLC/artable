@@ -91,6 +91,7 @@
                         <outlet property="collectionView" destination="RU7-6B-Ilf" id="k0j-Ct-bbu"/>
                         <outlet property="loginLogoutButton" destination="OlD-fR-2Ah" id="vf8-By-5wX"/>
                         <segue destination="JUJ-l1-w8W" kind="show" identifier="toAddEditCategoryVC" id="rTC-fi-UJS"/>
+                        <segue destination="TVK-Hb-29c" kind="show" identifier="toProductsVC" id="Cuh-6l-pFv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PM8-Ia-uYq" sceneMemberID="firstResponder"/>
@@ -179,9 +180,67 @@
             </objects>
             <point key="canvasLocation" x="1770" y="82"/>
         </scene>
+        <!--Admin ProductsVC-->
+        <scene sceneID="kBf-qe-SaV">
+            <objects>
+                <viewController id="TVK-Hb-29c" customClass="AdminProductsVC" customModule="ArtableAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3v-6x-1qe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="2KW-xe-TRg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Xg-eC-xmR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2KW-xe-TRg" secondAttribute="bottom" id="2fx-u0-xqZ"/>
+                            <constraint firstItem="5Xg-eC-xmR" firstAttribute="leading" secondItem="HAf-eP-X0y" secondAttribute="leading" id="3pT-aS-AAa"/>
+                            <constraint firstAttribute="bottom" secondItem="5Xg-eC-xmR" secondAttribute="bottom" id="7xl-i3-iCC"/>
+                            <constraint firstItem="2KW-xe-TRg" firstAttribute="top" secondItem="e3v-6x-1qe" secondAttribute="top" id="L0c-57-BR8"/>
+                            <constraint firstItem="2KW-xe-TRg" firstAttribute="leading" secondItem="HAf-eP-X0y" secondAttribute="leading" id="OSn-IL-dVv"/>
+                            <constraint firstItem="5Xg-eC-xmR" firstAttribute="top" secondItem="e3v-6x-1qe" secondAttribute="top" id="Oke-jD-l53"/>
+                            <constraint firstItem="2KW-xe-TRg" firstAttribute="trailing" secondItem="HAf-eP-X0y" secondAttribute="trailing" id="Tar-e6-ggz"/>
+                            <constraint firstItem="HAf-eP-X0y" firstAttribute="trailing" secondItem="5Xg-eC-xmR" secondAttribute="trailing" id="wvn-SN-LTk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HAf-eP-X0y"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5gt-du-RwT"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Xg-eC-xmR" id="raD-sN-JEr"/>
+                        <segue destination="EXt-pX-81g" kind="show" identifier="toAddEditProduct" id="LZX-uL-1pZ"/>
+                        <segue destination="JUJ-l1-w8W" kind="show" identifier="toEditCategory" id="Tss-AK-aG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWJ-rc-6lN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="951" y="802"/>
+        </scene>
+        <!--Add Edit ProductVC-->
+        <scene sceneID="6Li-yc-fY6">
+            <objects>
+                <viewController id="EXt-pX-81g" customClass="AddEditProductVC" customModule="ArtableAdmin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nGR-wu-77Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="817-9U-iLB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wqv-pu-hnv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="802"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_cat3" width="1500" height="1875"/>
         <image name="camera" width="66" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tss-AK-aG6"/>
+    </inferredMetricsTieBreakers>
 </document>

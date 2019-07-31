@@ -16,6 +16,8 @@ class AddEditCategoryVC: UIViewController {
     @IBOutlet weak var categoryImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var categoryToEdit: Category?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

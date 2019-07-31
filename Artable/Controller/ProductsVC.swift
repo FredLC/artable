@@ -34,6 +34,12 @@ class ProductsVC: UIViewController {
         setCategoriesListener()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
+        products.removeAll()
+        tableView.reloadData()
+    }
+    
     func setCategoriesListener() {
         listener = db.products(category: category.id).addSnapshotListener({ (snap, error) in
             if let error = error {

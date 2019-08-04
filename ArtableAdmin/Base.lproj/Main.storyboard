@@ -317,7 +317,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="aUq-6P-zms" id="yRC-9L-G6U"/>
                         <outlet property="addProductButton" destination="rhb-gU-7Aj" id="rcF-C0-EMI"/>
-                        <outlet property="productDescription" destination="7Tv-Uv-xlh" id="4O6-YH-qTD"/>
+                        <outlet property="productDescriptionText" destination="7Tv-Uv-xlh" id="8J8-Ot-e8n"/>
                         <outlet property="productImage" destination="39W-N2-fcf" id="BCg-s4-bky"/>
                         <outlet property="productNameText" destination="GmC-Ld-Ayx" id="Uaj-nR-0sm"/>
                         <outlet property="productPriceText" destination="TL2-E0-SgL" id="Fox-V8-adf"/>

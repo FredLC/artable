@@ -25,9 +25,17 @@ class ProductCell: UITableViewCell {
     func configureCell(product: Product) {
         productName.text = product.name
         if let url = URL(string: product.imageUrl) {
-            productImage.kf.setImage(with: url)
+            let placeholder = UIImage(named: "placeholder")
+            let options: KingfisherOptionsInfo = [KingfisherOptionsInfoItem.transition(.fade(0.1))]
+            productImage.kf.indicatorType = .activity
+            productImage.kf.setImage(with: url, placeholder: placeholder, options: options)
         }
-        productPrice.text = "$\(String(product.price))"
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = price
+        }
     }
     
     @IBAction func addToCartPressed(_ sender: Any) {

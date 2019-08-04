@@ -32,7 +32,6 @@ class ProductsVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         setCategoriesListener()
-        tableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

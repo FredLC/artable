@@ -56,7 +56,7 @@ struct Product {
             "id": product.id,
             "category": product.category,
             "price": product.price,
-            "productDescriptiom": product.productDescription,
+            "productDescription": product.productDescription,
             "imageUrl": product.imageUrl,
             "timeStamp": product.timeStamp,
             "stock": product.stock

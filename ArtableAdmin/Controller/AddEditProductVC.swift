@@ -15,10 +15,11 @@ class AddEditProductVC: UIViewController {
     // Outlets
     @IBOutlet weak var productNameText: UITextField!
     @IBOutlet weak var productPriceText: UITextField!
-    @IBOutlet weak var productDescription: UITextView!
     @IBOutlet weak var productImage: RoundedImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var addProductButton: RoundedButton!
+    @IBOutlet weak var productDescriptionText: UITextView!
+    
     
     // Variables
     var selectedCategory: Category!
@@ -26,7 +27,7 @@ class AddEditProductVC: UIViewController {
     
     var name = ""
     var price = 0.0
-    var productDescriptionText = ""
+    var productDescription = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +40,7 @@ class AddEditProductVC: UIViewController {
         if let product = productToEdit {
             productNameText.text = product.name
             productPriceText.text = String(product.price)
-            productDescription.text = product.productDescription
+            productDescriptionText.text = product.productDescription
             
             if let url = URL(string: product.imageUrl) {
                 productImage.contentMode = .scaleAspectFill
@@ -54,21 +55,21 @@ class AddEditProductVC: UIViewController {
     }
     
     func uploadImage() {
-        guard let image = productImage.image,
-            let productName = productNameText.text, productName.isNotEmpty,
-            let productPriceString = productPriceText.text, productPriceString.isNotEmpty,
-            let productPrice = Double(productPriceString),
-            let productDescription = productDescription.text, productDescription.isNotEmpty else {
-                simpleAlert(title: "Error", message: "Product image and name required")
+        guard let image = productImage.image ,
+            let name = productNameText.text , name.isNotEmpty ,
+            let description = productDescriptionText.text , description.isNotEmpty ,
+            let priceString = productPriceText.text ,
+            let price = Double(priceString) else {
+                simpleAlert(title: "Missing Fields", message: "Please fill out all required fields.")
                 return
         }
         
-        self.name = productName
-        self.price = productPrice
-        self.productDescriptionText = productDescription
+        self.name = name
+        self.price = price
+        self.productDescription = description
         
         guard let imageData = image.jpegData(compressionQuality: 0.2) else { return }
-        let imageRef = Storage.storage().reference().child("/productImages/\(productName).jpg")
+        let imageRef = Storage.storage().reference().child("/productImages/\(name).jpg")
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpeg"
         imageRef.putData(imageData, metadata: metaData) { (metaData, error) in
@@ -76,21 +77,21 @@ class AddEditProductVC: UIViewController {
                 self.handleError(error: error, message: "Unable to upload data")
                 return
             }
-        }
-        imageRef.downloadURL { (url, error) in
-            if let error = error {
-                self.handleError(error: error, message: "Unable to retrieve download url")
-                return
+            imageRef.downloadURL { (url, error) in
+                if let error = error {
+                    self.handleError(error: error, message: "Unable to retrieve download url")
+                    return
+                }
+                guard let url = url else { return }
+                self.uploadDocument(url: url.absoluteString)
             }
-            guard let url = url else { return }
-            self.uploadDocument(url: url.absoluteString)
         }
         
     }
     
     func uploadDocument(url: String) {
         var docRef: DocumentReference!
-        var product = Product.init(name: name, id: "", category: selectedCategory.id, price: price, productDescription: productDescriptionText, imageUrl: url)
+        var product = Product.init(name: name, id: "", category: selectedCategory.id, price: price, productDescription: productDescription, imageUrl: url)
         
         if let productToEdit = productToEdit {
             docRef = Firestore.firestore().collection("products").document(productToEdit.id)

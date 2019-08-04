@@ -21,7 +21,7 @@ struct Category {
         id: String,
         imageUrl: String,
         isActive: Bool = true,
-        timeStamp: Timestamp){
+        timeStamp: Timestamp) {
         self.name = name
         self.id = id
         self.imageUrl = imageUrl
